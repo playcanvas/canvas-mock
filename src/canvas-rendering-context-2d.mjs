@@ -45,6 +45,12 @@ const functions = [
 ];
 
 class CanvasRenderingContext2D {
+    /** @type {HTMLCanvasElement} */
+    canvas;
+
+    /**
+     * @param {HTMLCanvasElement} canvas - The canvas element to create the context from.
+     */
     constructor(canvas) {
         this.canvas = canvas;
     }

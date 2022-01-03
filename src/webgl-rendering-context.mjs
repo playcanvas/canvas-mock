@@ -437,22 +437,35 @@ const enums = {
 };
 
 class WebGLRenderingContext {
+    /**
+     * @param {HTMLCanvasElement} canvas - The canvas element to create the context from.
+     */
     constructor(canvas) {
         this.canvas = canvas;
     }
 
+    /** @type {number} */
     get drawingBufferWidth() {
         return this.canvas.width;
     }
 
+    /** @type {number} */
     get drawingBufferHeight() {
         return this.canvas.height;
     }
 
+    /**
+     * @param {string} ext - The extension name.
+     * @returns {object|null} The extension or null if not supported.
+     */
     getExtension(ext) {
         return null;
     }
 
+    /**
+     * @param {number} pname - The parameter to query.
+     * @returns {number} The value of the parameter.
+     */
     getParameter(pname) {
         switch (pname) {
             case this.ACTIVE_TEXTURE:
@@ -627,10 +640,16 @@ class WebGLRenderingContext {
         return null;
     }
 
+    /**
+     * @returns {WebGLShaderPrecisionFormat} The precision format supported by the context.
+     */
     getShaderPrecisionFormat() {
         return new WebGLShaderPrecisionFormat(127, 127, 23);
     }
 
+    /**
+     * @returns {string[]} The extensions supported by the context.
+     */
     getSupportedExtensions() {
         return [];
     }
