@@ -10,7 +10,7 @@
     "mock"
   ],
   "license": "MIT",
-  "module": "src/index.mjs",
+  "main": "src/index.mjs",
   "bugs": {
     "url": "https://github.com/playcanvas/canvas-mock/issues"
   },
@@ -22,7 +22,7 @@
     "extends": "@playcanvas/eslint-config"
   },
   "devDependencies": {
-    "@playcanvas/eslint-config": "^1.0.15",
+    "@playcanvas/eslint-config": "^1.0.16",
     "eslint": "^8.6.0"
   },
   "scripts": {
