@@ -1,11 +1,11 @@
 class WebGLShaderPrecisionFormat {
-    /** @type number */
+    /** @type {number} */
     #rangeMin;
 
-    /** @type number */
+    /** @type {number} */
     #rangeMax;
 
-    /** @type number */
+    /** @type {number} */
     #precision;
 
     /**

@@ -437,6 +437,9 @@ const enums = {
 };
 
 class WebGLRenderingContext {
+    /** @type {HTMLCanvasElement} */
+    canvas;
+
     /**
      * @param {HTMLCanvasElement} canvas - The canvas element to create the context from.
      */
@@ -464,7 +467,7 @@ class WebGLRenderingContext {
 
     /**
      * @param {number} pname - The parameter to query.
-     * @returns {number} The value of the parameter.
+     * @returns {boolean|number|string|Float32Array|Int32Array|Uint32Array} The value of the parameter.
      */
     getParameter(pname) {
         switch (pname) {
