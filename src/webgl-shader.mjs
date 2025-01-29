@@ -1,6 +1,6 @@
 class WebGLShader {
     /** @type {number} */
-    #type;
+    #type; /* eslint-disable-line no-unused-private-class-members */
 
     /**
      * @param {number} type - The type of the shader.
