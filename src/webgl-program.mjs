@@ -1,0 +1,3 @@
+class WebGLProgram {}
+
+export { WebGLProgram };

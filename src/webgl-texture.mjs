@@ -1,0 +1,3 @@
+class WebGLTexture {}
+
+export { WebGLTexture };
