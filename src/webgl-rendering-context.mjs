@@ -1,3 +1,9 @@
+import { WebGLBuffer } from './webgl-buffer.js';
+import { WebGLFramebuffer } from './webgl-framebuffer.js';
+import { WebGLProgram } from './webgl-program.js';
+import { WebGLRenderbuffer } from './webgl-renderbuffer.js';
+import { WebGLShader } from "./webgl-shader.mjs";
+import { WebGLTexture } from "./webgl-texture.js";
 import { WebGLShaderPrecisionFormat } from "./webgl-shader-precision-format.mjs";
 
 const functions = [
@@ -26,19 +32,7 @@ const functions = [
     'compressedTexSubImage2D',
     'copyTexImage2D',
     'copyTexSubImage2D',
-    'createBuffer',
-    'createFramebuffer',
-    'createProgram',
-    'createRenderbuffer',
-    'createShader',
-    'createTexture',
     'cullFace',
-    'deleteBuffer',
-    'deleteFramebuffer',
-    'deleteProgram',
-    'deleteRenderbuffer',
-    'deleteShader',
-    'deleteTexture',
     'depthFunc',
     'depthMask',
     'depthRange',
@@ -458,8 +452,81 @@ class WebGLRenderingContext {
     }
 
     /**
+     * @returns {?WebGLBuffer}
+     */
+    createBuffer() {
+        return new WebGLBuffer();
+    }
+
+    /**
+     * @returns {?WebGLFramebuffer}
+     */
+    createFramebuffer() {
+        return new WebGLFramebuffer();
+    }
+
+    /**
+     * @returns {?WebGLProgram}
+     */
+    createProgram() {
+        return new WebGLProgram();
+    }
+
+    /**
+     * @returns {?WebGLRenderbuffer}
+     */
+    createRenderbuffer() {
+        return new WebGLRenderbuffer();
+    }
+
+    /**
+     * @param {number} type - The type of shader to create.
+     * @returns {?WebGLShader}
+     */
+    createShader(type) {
+        return new WebGLShader(type);
+    }
+
+    /**
+     * @returns {?WebGLTexture}
+     */
+    createTexture() {
+        return new WebGLTexture();
+    };
+
+    /**
+     * @param {?WebGLBuffer} buffer - The buffer to delete.
+     */
+    deleteBuffer(buffer) {}
+
+    /**
+     * @param {?WebGLFramebuffer} framebuffer - The framebuffer to delete.
+     */
+    deleteFramebuffer(framebuffer) {}
+
+    /**
+     * @param {?WebGLProgram} program - The program to delete.
+     */
+    deleteProgram(program) {}
+
+    /**
+     * @param {?WebGLRenderbuffer} renderbuffer - The renderbuffer to delete.
+     */
+    deleteRenderbuffer(renderbuffer) {}
+
+    /**
+     * @param {?WebGLShader} shader - The shader to delete.
+     */
+    deleteShader(shader) {}
+
+    /**
+     * @param {?WebGLTexture} texture - The texture to delete.
+     */
+    deleteTexture(texture) {}
+
+    /**
      * @param {string} ext - The extension name.
-     * @returns {object|null} The extension or null if not supported.
+     * @returns {?object} The extension or null if not supported.
      */
     getExtension(ext) {
         return null;
@@ -644,7 +711,7 @@ class WebGLRenderingContext {
     }
 
     /**
-     * @returns {WebGLShaderPrecisionFormat} The precision format supported by the context.
+     * @returns {?WebGLShaderPrecisionFormat} The precision format supported by the context.
      */
     getShaderPrecisionFormat() {
         return new WebGLShaderPrecisionFormat(127, 127, 23);

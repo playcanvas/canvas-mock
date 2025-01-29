@@ -1,0 +1,3 @@
+class WebGLFramebuffer {}
+
+export { WebGLFramebuffer };

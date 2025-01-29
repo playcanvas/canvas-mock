@@ -1,0 +1,3 @@
+class WebGLBuffer {}
+
+export { WebGLBuffer };

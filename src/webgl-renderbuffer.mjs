@@ -1,0 +1,3 @@
+class WebGLRenderbuffer {}
+
+export { WebGLRenderbuffer };
