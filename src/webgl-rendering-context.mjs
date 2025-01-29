@@ -434,11 +434,34 @@ class WebGLRenderingContext {
     /** @type {HTMLCanvasElement} */
     canvas;
 
+    /** @type {Object} */
+    #contextAttributes;
+
     /**
      * @param {HTMLCanvasElement} canvas - The canvas element to create the context from.
+     * @param {Object} [contextAttributes] - Optional attributes for the context.
      */
-    constructor(canvas) {
+    constructor(canvas, contextAttributes = {}) {
         this.canvas = canvas;
+        this.#contextAttributes = {
+            alpha: true,
+            antialias: true,
+            depth: true,
+            desynchronized: false,
+            failIfMajorPerformanceCaveat: false,
+            powerPreference: 'default',
+            premultipliedAlpha: true,
+            preserveDrawingBuffer: false,
+            stencil: false,
+            ...contextAttributes
+        };
+    }
+
+    /**
+     * @returns {Object} The context attributes.
+     */
+    getContextAttributes() {
+        return { ...this.#contextAttributes };
     }
 
     /** @type {number} */
