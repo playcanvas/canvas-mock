@@ -1,10 +1,10 @@
-import { WebGLBuffer } from './webgl-buffer.js';
-import { WebGLFramebuffer } from './webgl-framebuffer.js';
-import { WebGLProgram } from './webgl-program.js';
-import { WebGLRenderbuffer } from './webgl-renderbuffer.js';
-import { WebGLShader } from "./webgl-shader.mjs";
-import { WebGLTexture } from "./webgl-texture.js";
-import { WebGLShaderPrecisionFormat } from "./webgl-shader-precision-format.mjs";
+import { WebGLBuffer } from './webgl-buffer.mjs';
+import { WebGLFramebuffer } from './webgl-framebuffer.mjs';
+import { WebGLProgram } from './webgl-program.mjs';
+import { WebGLRenderbuffer } from './webgl-renderbuffer.mjs';
+import { WebGLShaderPrecisionFormat } from './webgl-shader-precision-format.mjs';
+import { WebGLShader } from './webgl-shader.mjs';
+import { WebGLTexture } from './webgl-texture.mjs';
 
 const functions = [
     'activeTexture',
@@ -452,28 +452,28 @@ class WebGLRenderingContext {
     }
 
     /**
-     * @returns {?WebGLBuffer}
+     * @returns {?WebGLBuffer} A new WebGLBuffer object.
      */
     createBuffer() {
         return new WebGLBuffer();
     }
 
     /**
-     * @returns {?WebGLFramebuffer}
+     * @returns {?WebGLFramebuffer} A new WebGLFramebuffer object.
      */
     createFramebuffer() {
         return new WebGLFramebuffer();
     }
 
     /**
-     * @returns {?WebGLProgram}
+     * @returns {?WebGLProgram} A new WebGLProgram object.
      */
     createProgram() {
         return new WebGLProgram();
     }
 
     /**
-     * @returns {?WebGLRenderbuffer}
+     * @returns {?WebGLRenderbuffer} A new WebGLRenderbuffer object.
      */
     createRenderbuffer() {
         return new WebGLRenderbuffer();
@@ -481,18 +481,18 @@ class WebGLRenderingContext {
 
     /**
      * @param {number} type - The type of shader to create.
-     * @returns {?WebGLShader}
+     * @returns {?WebGLShader} A new WebGLShader object.
      */
     createShader(type) {
         return new WebGLShader(type);
     }
 
     /**
-     * @returns {?WebGLTexture}
+     * @returns {?WebGLTexture} A new WebGLTexture object.
      */
     createTexture() {
         return new WebGLTexture();
-    };
+    }
 
     /**
      * @param {?WebGLBuffer} buffer - The buffer to delete.
@@ -639,7 +639,7 @@ class WebGLRenderingContext {
             case this.RENDERBUFFER_BINDING:
                 return null;
             case this.RENDERER:
-                return "Null WebGL";
+                return 'Null WebGL';
             case this.SAMPLE_BUFFERS:
                 return 0;
             case this.SAMPLE_COVERAGE_INVERT:
@@ -701,9 +701,9 @@ class WebGLRenderingContext {
             case this.UNPACK_PREMULTIPLY_ALPHA_WEBGL:
                 return false;
             case this.VENDOR:
-                return "Null WebGL";
+                return 'Null WebGL';
             case this.VERSION:
-                return "WebGL 1.0";
+                return 'WebGL 1.0';
             case this.VIEWPORT:
                 return new Int32Array([0, 0, this.canvas.width, this.canvas.height]);
         }
