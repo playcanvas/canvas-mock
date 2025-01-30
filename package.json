@@ -30,6 +30,6 @@
   },
   "scripts": {
     "lint": "eslint src",
-    "types": "tsc --project tsconfig.json"
+    "build": "tsc --project tsconfig.json"
   }
 }
