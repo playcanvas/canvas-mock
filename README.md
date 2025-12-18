@@ -1,5 +1,11 @@
 # Canvas-Mock: A Mock for HTMLCanvasElement
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/playcanvas/canvas-mock/blob/main/LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/@playcanvas/canvas-mock.svg?style=flat?style=flat)](https://www.npmjs.com/package/@playcanvas/canvas-mock)
+[![NPM Downloads](https://img.shields.io/npm/dw/@playcanvas/canvas-mock)](https://npmtrends.com/@playcanvas/canvas-mock)
+
+| [User Guide](https://developer.playcanvas.com/user-manual/engine/standalone) | [API Reference](https://api.playcanvas.com/canvas-mock/) | [Blog](https://blog.playcanvas.com/) | [Forum](https://forum.playcanvas.com/) | [Discord](https://discord.gg/RSaMRzg) |
+
 The `canvas-mock` package recreates the `HTMLCanvasElement` API and is intended to be used in a Node.js environment. This makes it possible to run WebGL-based libraries server-side or to execute unit tests for WebGL codebases within Node.
 
 It has been tested with the [PlayCanvas Engine](https://github.com/playcanvas/engine) but other libraries should be compatible too.
