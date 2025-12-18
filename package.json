@@ -12,6 +12,7 @@
   "license": "MIT",
   "main": "src/index.mjs",
   "types": "types/index.d.mts",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/playcanvas/canvas-mock/issues"
   },
@@ -26,10 +27,12 @@
   "devDependencies": {
     "@playcanvas/eslint-config": "^2.0.8",
     "eslint": "^9.19.0",
+    "publint": "^0.3.16",
     "typescript": "^5.7.3"
   },
   "scripts": {
     "lint": "eslint src",
+    "publint": "publint",
     "build": "tsc --project tsconfig.json"
   }
 }
